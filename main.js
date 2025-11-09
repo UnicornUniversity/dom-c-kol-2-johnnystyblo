@@ -11,8 +11,15 @@
  * @returns {string} containing number converted to output system
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-  //TODO code
-  //let dtoOut = exMain(inputNumber, inputNumberSystem, outputNumberSystem);
+  let x = Number(inputNumber);
+  let z = [];
+  while (x >= 0.5) {
+    let y = x % 2;
+    z.push(y);
+    x = Math.floor(x / 2);
+  }
+  z = z.reverse();
+  let dtoOut = z.join("");
   return dtoOut;
 }
 
