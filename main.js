@@ -28,7 +28,7 @@ export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
   return z.join("");
 }
 
-console.log(main("83", permittedInputSystems, permittedOutputSystems));
+console.log(main("83", 10, 2));
 /**
  * TODO - Change this to contain all input number systems that your application can convert from.
  * Function which returns which number systems are permitted on input.
