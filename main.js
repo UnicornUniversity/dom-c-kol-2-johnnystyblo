@@ -11,18 +11,24 @@
  * @returns {string} containing number converted to output system
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-  let x = Number(inputNumber);
+  if (inputNumberSystem !== 10 || outputNumberSystem !== 2) {
+    return "Conversion not supported";
+  }
+
+  let x = inputNumber;
+  if (x === 0) return "0";
+	
   let z = [];
-  while (x >= 0.5) {
+  while (x > 0) {            
     let y = x % 2;
     z.push(y);
     x = Math.floor(x / 2);
   }
-  z = z.reverse();
-  let dtoOut = z.join("");
-  return dtoOut;
+  z.reverse();
+  return z.join("");
 }
-console.log(main("83", 10, 2));
+
+console.log(main("83", permittedInputSystems, permittedOutputSystems));
 /**
  * TODO - Change this to contain all input number systems that your application can convert from.
  * Function which returns which number systems are permitted on input.
