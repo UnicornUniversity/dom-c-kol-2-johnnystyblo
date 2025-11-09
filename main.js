@@ -15,7 +15,7 @@ export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
     return "Conversion not supported";
   }
 
-  let x = inputNumber;
+  let x = Math.floor(Number(inputNumber));
   if (x === 0) return "0";
 	
   let z = [];
