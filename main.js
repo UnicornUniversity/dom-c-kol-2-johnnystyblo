@@ -11,23 +11,16 @@
  * @returns {string} containing number converted to output system
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-  // only implement decimal->binary (like your snippet)
-  if (inputNumberSystem !== 10 || outputNumberSystem !== 2) {
-    return "Conversion not supported";
-  }
-
-  let x = Math.floor(Number(inputNumber)); // ensure integer
-  if (!Number.isFinite(x)) return "Invalid input";
-  if (x === 0) return "0";
-
+  let x = Number(inputNumber);
   let z = [];
-  while (x > 0) {              // use x>0 (not >=0.5)
+  while (x >= 0.5) {
     let y = x % 2;
     z.push(y);
     x = Math.floor(x / 2);
   }
-  z.reverse();
-  return z.join("");
+  z = z.reverse();
+  let dtoOut = z.join("");
+  return dtoOut;
 }
 console.log(main("83", 10, 2));
 /**
