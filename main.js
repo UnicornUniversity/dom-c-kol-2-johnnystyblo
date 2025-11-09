@@ -11,9 +11,6 @@
  * @returns {string} containing number converted to output system
  */
 export function main(inputNumber, inputNumberSystem, outputNumberSystem) {
-  if (inputNumberSystem !== 10 || outputNumberSystem !== 2) {
-    return "Conversion not supported";
-  }
 
   let x = Math.floor(Number(inputNumber));
   if (x === 0) return "0";
